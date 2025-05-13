@@ -1,3 +1,5 @@
+# build pipeline
+
 name: webstore-build
 
 on:
@@ -24,8 +26,8 @@ jobs:
       - name: 'Publish'
         run: dotnet publish --configuration ${{ env.BUILD_CONF }} -o ./webstore
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: webstore
-          path: ./webstore
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: webstore
+      #     path: ./webstore
